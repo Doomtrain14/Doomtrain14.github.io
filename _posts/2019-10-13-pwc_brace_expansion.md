@@ -86,7 +86,7 @@ A quick gray fox jumps over the lazy cow
 ### Notes:
 * The solution will iterate through all combinations in case of a nested braces, such that for an input:
 ```
-"{{Daily,Weekly},Monthly,Yearly} Challenge"
+"\{\{Daily,Weekly},Monthly,Yearly} Challenge"
 ``` 
 
 the ouput would be
