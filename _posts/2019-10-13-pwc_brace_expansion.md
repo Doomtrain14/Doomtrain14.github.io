@@ -11,12 +11,12 @@ The script should take command line argument **```"Perl {Daily,Weekly,Monthly,Ye
  Perl Monthly Challenge
  Perl Yearly Challenge
 ```
-### Solution:
+### **Solution:**
 I removed empty **```braces {}```** from the input string then I used a recursive function to check if the string has valid braces to expand. The use of **```[^{}]*```** instead of a simple **```.*```** to match the contents of the braces ensures that the inner most brace is processed first. 
 
 I used perl's special variables **`` $` ``** and **```$'```** (same as **```$PREMATCH```** and **```$POSTMATCH```**) and stored them in **```$l```** and **```$r```** variables. Then captured the contents of the matching braces with **```()```** this was stored in **```$1```** and also assigned to the **```$m```** variable. The captured content was split using comma **```(,)```** as delimiter then each element were prepended and appended with the **```$l```** and **```$r```** variables respectively.
 
-### Code:
+### **Code:**
 ```perl
 use strict;
 use warnings;
@@ -39,19 +39,25 @@ sub expand {
     my $string = shift;
 
     # Regex was used to check if the string contains matching braces
-    # Notice that [^{}]* instead of a simple .* to match the contents of the braces
-    # this is to make sure that the inner most brace is processed first
-    
+    # Notice that [^{}]* instead of a simple .* to match the 
+    # contents of the braces this is to make sure that the inner 
+    # most brace is processed first
+
     # The matching string was captured using () and will be stored in $1
     if ($string =~ /{([^{}]*)}/) {
         # The captured value, the prematch and postmatch were stored
         # in variables $l,$m and $r respectively
         my ($l,$m,$r) = ($`,$1,$');
-        # The captured value stored in $m was split using comma(,) as delimiter
+
+        # The captured value stored in $m was split 
+        # using comma(,) as delimiter
         # The resulting list was used in a for loop
         for (",$m"=~/,([^,]*)/g) {
-            #A new string containing the prematch, a value from the split operation of $m
-            #and the postmatch will be used in the recursive function.
+            # A new string containing the prematch
+            # a value from the split operation of $m
+            # and the postmatch will be used in the
+            #  recursive function
+
             #The process will be repeated until...
             expand($l.$_.$r);
         }
@@ -63,7 +69,7 @@ sub expand {
 }
 ```
 
-### Output:
+### **Output:**
 ```perl
 perl ch-1.pl "Perl {Daily,Weekly,Monthly,Yearly} Challenge"
 Perl Daily Challenge
