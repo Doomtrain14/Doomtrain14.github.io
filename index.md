@@ -1,3 +1,7 @@
+---
+title: Main
+layout: default
+---
 ## Welcome to GitHub Pages	
 
 <ul class="myposts">
