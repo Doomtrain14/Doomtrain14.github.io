@@ -2,6 +2,7 @@
 layout: post
 title: "Perl Weekly Challenge W029 - Brace Expansion"
 tags: ["brace", "expansion", "perl"]
+category: pwc
 ---
 
 One of the task for this week's challenge is to write a script to demonstrate brace expansion. 
