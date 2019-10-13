@@ -3,6 +3,7 @@ layout: post
 title: "Perl Weekly Challenge W029 - Calling C"
 tags: ["c", "inline", "nativecall", "perl"]
 categories: ["pwc"]
+comments: true
 ---
 The second task for this week's challenge is to write a script to demostrate calling a C function in perl, it can be a user-defined or a standard(built-in) C function. 
 
