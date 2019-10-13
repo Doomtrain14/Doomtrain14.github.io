@@ -6,7 +6,7 @@ layout: default
 <ul class="myposts">
 {% for post in site.posts %}
     <li><a href="{{ post.url }}">{{ post.title}}</a>
-    <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <div align="right"><span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span></div>
     <span>{{ post.excerpt }}</span>
     </li>
 {% endfor %}
