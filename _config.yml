@@ -1,3 +1,5 @@
 theme: jekyll-theme-midnight
 title: Yet, Another Perl Hacker
-description: perl programming and more.
+description: perl programming and more
+github:
+  is_project_page: false
