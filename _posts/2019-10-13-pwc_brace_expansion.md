@@ -13,6 +13,7 @@ The script should take command line argument **```"Perl {Daily,Weekly,Monthly,Ye
  Perl Monthly Challenge
  Perl Yearly Challenge
 ```
+<!-- more -->
 ### **Solution:**
 I removed empty **```braces {}```** from the input string then I used a recursive function to check if the string has valid braces to expand. The use of **```[^{}]*```** instead of a simple **```.*```** to match the contents of the braces ensures that the inner most brace is processed first. 
 

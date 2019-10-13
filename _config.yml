@@ -1,3 +1,4 @@
 theme: jekyll-theme-midnight
 title: Yet, Another Perl Hacker
 description: perl programming and more
+excerpt_separator: "<!-- more -->"
